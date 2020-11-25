@@ -9,7 +9,7 @@ ssr(){
         }
 
         start(){
-                uci set shadowsocksr.cfg013fd6.global_server=cfg094a8f
+                uci set shadowsocksr.cfg013fd6.global_server=cfg184a8f
                 uci commit shadowsocksr
                 /etc/init.d/shadowsocksr start
         }
