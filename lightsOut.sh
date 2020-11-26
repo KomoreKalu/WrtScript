@@ -1,6 +1,6 @@
 #!/bin/bash
-. ./ssr.sh
-. ./dhcp.sh
+. /root/WrtScript/ssr.sh
+. /root/WrtScript/dhcp.sh
 ssr 
 start
 dhcp 
