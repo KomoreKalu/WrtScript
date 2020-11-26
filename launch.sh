@@ -1,13 +1,18 @@
 #!/bin/bash
-. ./hostCheck.sh
-. ./ssr.sh
-. ./dhcp.sh
-sleep 120 
+. /root/WrtScript/hostCheck.sh
+. /root/WrtScript/ssr.sh
+. /root/WrtScript/dhcp.sh
+
+sleep 40 
 HOST='172.16.7.1'
-if [ $(hostCheck $HOST) -gt 0 ] ; then	
+COUNT=$(hostCheck $HOST)
+if [ "$COUNT" -gt 0 ] ; then	
+	echo "$HOST online"		
 	ssr 
 	stop
 	dhcp 
 	setup
 	wifi
+else
+	echo "skip"
 fi
